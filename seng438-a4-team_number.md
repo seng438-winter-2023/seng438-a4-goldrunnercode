@@ -52,6 +52,7 @@ intersectsReturnsTrueUpper(): Tests to see if the intersects function returns tr
 intersectsReturnFalseUpper(): Tests to see if the intersects function returns false if given two values outside the upper bound.
 
 # Why do we need mutation testing? Advantages and disadvantages of mutation testing
+We need mutation testing so that we can test the validity of the code abd it's ability to catch errors if the code is not working as we want it to. The advantages of mutation testing is that it improves the testing code which in turn improves the stability of the SUT it also can show some loopholes in the SUT that we could not identify before doing the mutation testing. The disadvantages are that mutation testing can't be used when you are doing blackbox testing and that it is time consuming if the test code is already up to standard it can be completely useless. Another disadvantage is if the code is complex it can be hard to analyze mutants generated. 
 
 # Explain your SELENUIM test case design process
 We are going to test several functions on the ikea canadian website: Best Prices Page, Gifting Page, Ikea Food, New at Ikea, and the Search Bar for each of the pages we are going to test navigating to different pages they are supposed to display and for the search function we will try the different data that you can search
