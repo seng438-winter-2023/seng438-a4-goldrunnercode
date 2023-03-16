@@ -18,6 +18,11 @@ We understand that mutation tests are needed because testing the validity of you
 
 # Report all the statistics and the mutation score for each test class
 
+Data Utilities increased from 46% mutation coverage to 58%, an increase of 12%
+
+Range increased from 8% to 19%, an increase of 11%
+
+
 # Analysis drawn on the effectiveness of each of the test classes
 
 # A discussion on the effect of equivalent mutants on mutation score accuracy
