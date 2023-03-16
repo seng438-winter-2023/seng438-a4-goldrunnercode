@@ -16,6 +16,74 @@ We understand that mutation tests are needed because testing the validity of you
 
 # Analysis of 10 Mutants of the Range class 
 
+Range Class Mutants
+1.
+
+public double getCentralValue() {
+return (this.lower + this.upper) / 2.0;
+}
+
+Replacing the addition with subtraction results in a killed mutant
+
+Ex. lower = 1 upper = 2
+
+(1+2)/2 = 1.5
+(1-2)/2 = -0.5
+
+1.5 != -0.5, mutant killed
+
+2.
+Replacing the division with multiplication results in a killed mutant
+
+Ex. lower = 1 upper = 2
+
+(1+2)/2 = 1.5
+(1+2)*2 = 6
+
+1.5 != 6, mutant killed
+
+3.
+Replacing 2 with 1 results in a killed mutant
+
+Ex. lower = 1 upper = 2
+
+(1+2)/2 = 1.5
+(1+2)/1 = 3
+
+1.5 != 3, mutant killed
+
+4.
+public double getLength() {
+if (lower > upper) {
+String msg = "Range(double, double): require lower (" + lower
++ ") <= upper (" + upper + ").";
+throw new IllegalArgumentException(msg);
+}
+return this.upper - this.lower;
+}
+
+
+Replacing the subtraction with addition results in a killed mutant
+
+Ex. lower = 1 upper = 2
+
+2-1= 1
+2+1 = 3
+
+1 != 3, mutant killed
+
+5 ang 6
+The Pit Mutation test created mutants for line 144 in the Range class. This class tests to see if the double value input is with the range of the class. The first mutation changes the conditional boundary of >= to >. The second mutation changes the other conditional boundary of <= to <. We didn't have a test for the contains function and therefore the mutant was not killed.
+
+7 and 8
+The Pit Mutation test created mutants for line 90 in the Range class. The first mutation was to change the conditional boundary from > to >=. Our test suite survived this with our equals test because the function no longer threw an IllegalArgumentException instead of returning a value. The second mutation negated the condition entirely which our test suite survived with our rangedFlipped Bounds test which expected an illegalargumentexception.
+
+9
+In the range constructor, the mutations test removed the assignment of the lower variable. This mutation was killed as illegal ranges are caught with our rangedFlipped Bounds test which expected an illegalargumentexception.
+
+10
+removing the call to throw an illegalargumentexception caused our ranged flipped test to fail and allowed mutations to survive. This is because the test case was looking for errors and not exceptions.
+
 # Report all the statistics and the mutation score for each test class
 
 Data Utilities increased from 46% mutation coverage to 58%, an increase of 12%
@@ -24,6 +92,8 @@ Range increased from 8% to 19%, an increase of 11%
 
 
 # Analysis drawn on the effectiveness of each of the test classes
+
+Because the range class is so small and simplistic, each test case is quite effective and catches most mutants. Mutants that are not caught can be fixed relatively easily once the problem is found.
 
 # A discussion on the effect of equivalent mutants on mutation score accuracy
 Equivelant mutants are mutants that produce the same behaviour as the original code so this can lead to almost an inflation of what your mutation coverage should actually be. This is because you are creating a mutant that isn't actually needed in your mutation testing but you are doing it anyway. But if your testing system isn't good enough they can actually lead to a lower score on your mutation testing and show you what you need to fix in your testing suite. 
