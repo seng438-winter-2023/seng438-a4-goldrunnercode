@@ -72,16 +72,16 @@ Ex. lower = 1 upper = 2
 
 1 != 3, mutant killed
 
-5 ang 6
+5 ang 6.
 The Pit Mutation test created mutants for line 144 in the Range class. This class tests to see if the double value input is with the range of the class. The first mutation changes the conditional boundary of >= to >. The second mutation changes the other conditional boundary of <= to <. We didn't have a test for the contains function and therefore the mutant was not killed.
 
-7 and 8
+7 and 8.
 The Pit Mutation test created mutants for line 90 in the Range class. The first mutation was to change the conditional boundary from > to >=. Our test suite survived this with our equals test because the function no longer threw an IllegalArgumentException instead of returning a value. The second mutation negated the condition entirely which our test suite survived with our rangedFlipped Bounds test which expected an illegalargumentexception.
 
-9
+9.
 In the range constructor, the mutations test removed the assignment of the lower variable. This mutation was killed as illegal ranges are caught with our rangedFlipped Bounds test which expected an illegalargumentexception.
 
-10
+10.
 removing the call to throw an illegalargumentexception caused our ranged flipped test to fail and allowed mutations to survive. This is because the test case was looking for errors and not exceptions.
 
 # Report all the statistics and the mutation score for each test class
