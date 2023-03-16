@@ -21,7 +21,7 @@ We understand that mutation tests are needed because testing the validity of you
 # Analysis drawn on the effectiveness of each of the test classes
 
 # A discussion on the effect of equivalent mutants on mutation score accuracy
-
+Equivelant mutants are mutants that produce the same behaviour as the original code so this can lead to almost an inflation of what your mutation coverage should actually be. This is because you are creating a mutant that isn't actually needed in your mutation testing but you are doing it anyway. But if your testing system isn't good enough they can actually lead to a lower score on your mutation testing and show you what you need to fix in your testing suite. 
 # A discussion of what could have been done to improve the mutation score of the test suites
 How did we go about developing new test cases?
 We ran our original code as a Pit Mutation Test and proceeded to open up the .java files from the Pit Summary. At the bottom of the document there is a list of mutations that are either survived or killed. We would parse through this list and develop test cases to address different lines of code.
