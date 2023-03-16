@@ -2,15 +2,17 @@
 
 **Lab. Report \#4 – Mutation Testing and Web app testing**
 
-| Group \#:      |     |
+
+| Group \#: 29      |     |
 | -------------- | --- |
 | Student Names: |     |
-|                |     |
-|                |     |
-|                |     |
+| Evan                |   
+| Abdullah            |   
+| Jack                |   
+| Max                 | 
 
 # Introduction
-
+We understand that mutation tests are needed because testing the validity of your tests is very important as you need to know that you can trust these tests to catch errors in the code. We understand that GUI testing is important as we need to be able to test our GUI's in a more efficient way than just exploratory testing and using something like Selenium will give us the tools to do so. 
 
 # Analysis of 10 Mutants of the Range class 
 
@@ -52,16 +54,20 @@ intersectsReturnFalseUpper(): Tests to see if the intersects function returns fa
 # Why do we need mutation testing? Advantages and disadvantages of mutation testing
 
 # Explain your SELENUIM test case design process
+We are going to test several functions on the ikea canadian website: Best Prices Page, Gifting Page, Ikea Food, New at Ikea, and the Search Bar for each of the pages we are going to test navigating to different pages they are supposed to display and for the search function we will try the different data that you can search
 
 # Explain the use of assertions and checkpoints
-
+We use assertions to make sure that the function reaches the right page or the right search to confirm that we were succesfully to display the correct information.
 # how did you test each functionaity with different test data
-
+For each page there are different options of pages it should redirect you to so the different data that we used there was choosing different options. For the search function we tried both a search that should come up with options which was desk and a search that should not come up with options 40404.
 # Discuss advantages and disadvantages of Selenium vs. Sikulix
+Advantages of Selenium is that it is really easy to use as you can record most of the inputs that you want it to take and it will record those inputs for later use, you can then just add your assertion test cases. The disadvantage of using this is that it isn't really suitable for making large tests as making tests with recording is tedious. Another disadvantage is that it does not have any features for generating a report of the results. 
 
+Sikulix the advantages are that it can work on just about anything you can get Sikulux to scrape just about anything that is on your screen including just ruunning through your own machine scraping for example your file explorer. The disadvantages are that it is a picture based system so if there are artifacts that look similar to one another the tests could fail just because the machine clicked the wrong button mistakenly.
 # How the team work/effort was divided and managed
-
+We split up the work for increasing the mutation testing and doing manual mutation looking Abduallah and Evan worked on DataUtilities and Jack and Max worked on Range. For the Selenium tests we each tested two of the pages or search function and the multiple data options for those functions
 
 # Difficulties encountered, challenges overcome, and lessons learned
-
+It was quite difficult to learn how to use sikulix as there are not many tutorials out there on how to learn how to use the tool. 
 # Comments/feedback on the lab itself
+Awesome lab! We had alot of fun learning about mutation testing and GUI testing 
