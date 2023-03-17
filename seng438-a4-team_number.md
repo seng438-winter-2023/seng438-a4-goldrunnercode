@@ -95,7 +95,7 @@ Range increased from 8% to 19%, an increase of 11%
 
 # Analysis drawn on the effectiveness of each of the test classes
 
-Because the range class is so small and simplistic, each test case is quite effective and catches most mutants. Mutants that are not caught can be fixed relatively easily once the problem is found.
+For the utilities test we only tested 5 out of the 15 methods, because we only have 19% and we are trying to cover 33% of the methods we can assume that the mutation coverage is incomplete and would need more tests to further increase this score, including tests for the methods in range that went untested. For Datautilities we achieved a 58% coverage which is an alright score but it means that our tests are incomplete and we can increase our mutation score by adding more tests. 
 
 # A discussion on the effect of equivalent mutants on mutation score accuracy
 Equivelant mutants are mutants that produce the same behaviour as the original code so this can lead to almost an inflation of what your mutation coverage should actually be. This is because you are creating a mutant that isn't actually needed in your mutation testing but you are doing it anyway. But if your testing system isn't good enough they can actually lead to a lower score on your mutation testing and show you what you need to fix in your testing suite. 
